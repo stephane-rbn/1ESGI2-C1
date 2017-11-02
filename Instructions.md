@@ -136,7 +136,7 @@ for(e1; e2; e3) {
 	// instructions
 }
 ```
-e1 = une instruction **quelconque** qui est exécutée q'une seule fois   
+e1 = une instruction **quelconque** qui n'est exécutée qu'une seule fois   
 e2 = une condition de continuation (vraie)  
 e3 = une instruction quelconque exécutée à chaque passage dans la boucle
 
