@@ -223,3 +223,40 @@ La table ASCII extended en possèdent 256 (de 0 à 127 puis de 128 à 255) car :
 
 
 > Un nombre entier en C est comme une condition : différent de 0 vaut VRAI, égal à 0 vaut FAUX
+
+`rand()` est un générateur retournant une pseudo-aléatoire valeur entière comprise entre ​`0` et `RAND_MAX` (`0` et `RAND_MAX` comprises).
+
+
+Pour générer une lettre de l'aphabet aléatoirement :
+
+```c
+char upper = 'A' + rand() % 26;
+char lower = 'a' + rand() % 26;
+```
+
+Dans cette exemple, `upper` et `lower` auraont toujours la même valeur quelque soit le nombre de compilation du fichier.
+
+`srand()` doit être appelée avant tout appel à rand() pour initialiser le générateur de nombres aléatoires.
+
+`srand()`, en lui assignant des paramètres, permet de fixer une graîne (seed) aléatoire qui est censée évoluer et donc générer de vrai valeurs aléatoires.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+
+    srand(time(NULL));
+
+    for (int i = 0; i < 10; i++) {
+        printf("%c ", 'A' + rand() % 26);
+    }
+
+    return 0;
+}
+
+// 1ère compilation : H M O Z X E C W X P
+// 2ème compilation : K W Z D F X Y H I X
+// 3ème compilation : G E M A O W M T V V
+```
