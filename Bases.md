@@ -150,11 +150,17 @@ Opérateurs :
 `
 - Affectation : `= += -= /= %= *= `
 
-Pour obtenir le chiffre des dizaines avec `%`:
+Pour obtenir le chiffre des **dizaines** avec `%`:
 
-- `n = 123`
-- `n = n/10 => 12`
-- `n = n%10 => 2`
+- `n = 123 // On souhaite obtenir le chiffre des dizaines de 123` 
+- `n = n / 10 // On effectue la division entière de ce nombre par 10 => 12`
+- `n = n % 10 // On applique le modulo 10 au résultat => 2`
+
+Pour obtenir le chiffre des **centaines** avec `%`:
+
+- `n = 123 // On souhaite obtenir le chiffre des centaines de 123` 
+- `n = n / 100 // On effectue la division entière de ce nombre par 100 => 1`
+- `n = n % 100 // On applique le modulo 10 au résultat => 1`
 
 `z = pow(2, 3) => 2^3`
 
