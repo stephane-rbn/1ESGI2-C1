@@ -225,20 +225,22 @@ La table ASCII extended en possèdent 256 (de 0 à 127 puis de 128 à 255) car :
 > Un nombre entier en C est comme une condition : différent de 0 vaut VRAI, égal à 0 vaut FAUX
 
 `rand()` est un générateur retournant une pseudo-aléatoire valeur entière comprise entre ​`0` et `RAND_MAX` (`0` et `RAND_MAX` comprises).
+> Si on utilise une boucle, on aura l'impression que les valeurs sont aléatoires mais il ne s'agit que de nombres "pseudo-aléatoires". `rand`  va en réalité toujours renvoyer la même séquence de nombres.
 
-
-Pour générer une lettre de l'aphabet aléatoirement :
+Pour générer une lettre de l'aphabet "aléatoirement" :
 
 ```c
 char upper = 'A' + rand() % 26;
 char lower = 'a' + rand() % 26;
 ```
 
-Dans cette exemple, `upper` et `lower` auraont toujours la même valeur quelque soit le nombre de compilation du fichier.
+Dans cette exemple, `upper` et `lower` auront toujours la même valeur quelque soit le nombre de compilation du fichier.
 
-`srand()` doit être appelée avant tout appel à rand() pour initialiser le générateur de nombres aléatoires.
+`void srand(int start)` est une fonction qui permet d'indiquer à `rand()` où commencer, où **start** indiquera où se placer dans la séquence. Elle doit être appelée avant tout appel à `rand()` pour initialiser le générateur de nombres aléatoires.
 
-`srand()`, en lui assignant des paramètres, permet de fixer une graîne (seed) aléatoire qui est censée évoluer et donc générer de vrai valeurs aléatoires.
+Le plus courant est d'utiliser la fonction `int time(int*)` qui est définie dans *time.h*  ; cette fonction renvoie le nombre de secondes écoulées depuis le premier janvier 1970. Pratique car c'est rare de lancer deux programmes dans la même secondes.
+
+On ne se servira pas du paramètre de `time()` que l'on mettra à `NULL`.
 
 ```c
 #include <stdio.h>
