@@ -185,6 +185,8 @@ code format : dit au compilateur quel type de valeur on veut afficher avec print
 | float (4 octets) | `%f` | `%e` |
 | double (8 octets) | `%lf` | `%le` |
 
+Note : Pour un `double`, on utilisera `%lf` avec la fonction `scanf` et `%f` avec la fonction `printf`. Un `scanf("%f")` sur un double n'affectera rien à la variable. 
+
 `char` -> `short` -> `int` -> `long` -> `float` -> `double`
 
 `char` (1 octet) permet de :
