@@ -103,14 +103,17 @@ Types de variables :
 
 - Signed : entiers relatifs
 - Unsigned : entier naturels
-- short (2 octets)
-- int (4 octets)
-- long (4 octets)
 
-1 octet : de -128 à 127 (de 0 à 255 en non-signé)  
-2 octets : - 32000 à 32000 (de 0 à 65000 en non-signé)  
-4 octets : - 2,5 milliards à 2,5 milliards (ou de 0 à 5 milliards en non-signé)  
-8 octets : -2.3E-308 to 1.7E+308 
+| Type entiers | Taille en octet | signed + - | unsigned + |
+| --- | --- | --- | --- |
+| char | 1 octet | -128 à 127 | 0 à 255 |
+| short | 2 octets | -32 000 à 32 000 | 0 à 65 000 |
+| int / long | 4 octets | -2,5 milliards à 2,5 milliards | 0 à 5 milliards |
+
+| Types réels | Taille en octet | Plage valeurs | Précision après virgule |
+| --- | --- | --- | --- |
+| float | 4 octets | -3.4E-308 à 3.4E+308 | 6 chiffres |
+| double | 8 octets | -1.7E-308 à 1.7E+308 | 15 chiffres |
 
 Exemples :  
 - `unsigned int zipcode`  
