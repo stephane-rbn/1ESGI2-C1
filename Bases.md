@@ -240,8 +240,8 @@ Avec `min` et `max` deux entiers définis au préalable. En effet `a % b 	∈ {0
 Pour générer une lettre de l'aphabet "aléatoirement" :
 
 ```c
-char upper = 'A' + (rand() % 26) + 1;
-char lower = 'a' + (rand() % 26) + 1;
+char upper = 'A' + rand() % 26;
+char lower = 'a' + rand() % 26;
 ```
 
 Dans cette exemple, `upper` et `lower` auront toujours la même valeur quelque soit le nombre de compilation du fichier.
@@ -262,7 +262,7 @@ int main() {
     srand(time(NULL));
 
     for (int i = 0; i < 10; i++) {
-        printf("%c ", 'A' + (rand() % 26) + 1;
+        printf("%c ", 'A' + rand() % 26;
     }
 
     return 0;
