@@ -262,7 +262,7 @@ int main() {
     srand(time(NULL));
 
     for (int i = 0; i < 10; i++) {
-        printf("%c ", 'A' + rand() % 26;
+        printf("%c ", 'A' + rand() % 26);
     }
 
     return 0;
