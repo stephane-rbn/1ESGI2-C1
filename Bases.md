@@ -227,21 +227,28 @@ La table ASCII extended en possèdent 256 (de 0 à 127 puis de 128 à 255) car :
 
 > Un nombre entier en C est comme une condition : différent de 0 vaut VRAI, égal à 0 vaut FAUX
 
-`rand()` est un générateur retournant une pseudo-aléatoire valeur entière comprise entre ​`0` et `RAND_MAX` (`0` et `RAND_MAX` comprises).
-> Si on utilise une boucle, on aura l'impression que les valeurs sont aléatoires mais il ne s'agit que de nombres "pseudo-aléatoires". `rand`  va en réalité toujours renvoyer la même séquence de nombres.
+`rand()` est un générateur retournant une pseudo-aléatoire valeur entière comprise entre les bornes `0` et `RAND_MAX` (`0` et `RAND_MAX` comprises, `RAND_MAX étant au moins 32767`).
+
+Pour définir nos propres bornes, on peut faire : 
+
+`randomNumber = (rand() % (max - min + 1)) + min;`
+
+Avec `min` et `max` deux entiers définis au préalable. En effet `a % b 	∈ {0 ; a - 1}`.
+
+> Si on utilise une boucle, on aura l'impression que les valeurs sont aléatoires mais il ne s'agit que de nombres "pseudo-aléatoires". `rand` va en réalité toujours renvoyer la même séquence de nombres.
 
 Pour générer une lettre de l'aphabet "aléatoirement" :
 
-```c
-char upper = 'A' + rand() % 26;
-char lower = 'a' + rand() % 26;
+```
+char upper = 'A' + rand() % 27;
+char lower = 'a' + rand() % 27;
 ```
 
 Dans cette exemple, `upper` et `lower` auront toujours la même valeur quelque soit le nombre de compilation du fichier.
 
 `void srand(int start)` est une fonction qui permet d'indiquer à `rand()` où commencer, où **start** indiquera où se placer dans la séquence. Elle doit être appelée avant tout appel à `rand()` pour initialiser le générateur de nombres aléatoires.
 
-Le plus courant est d'utiliser la fonction `int time(int*)` qui est définie dans *time.h*  ; cette fonction renvoie le nombre de secondes écoulées depuis le premier janvier 1970. Pratique car c'est rare de lancer deux programmes dans la même secondes.
+Le plus courant est d'utiliser la fonction `int time(int*)` qui est définie dans *time.h*  ; cette fonction renvoie le timestamp Unix, c'est à dire le nombre de secondes écoulées depuis le premier janvier 1970 (qui est [l'Epoch Unix](https://fr.wikipedia.org/wiki/Epoch)). Puisque l'on se place à un endroit différent dans la séquence, `rand()` reste pseudo-alétoire, mais il est rare de lancer deux programmes dans la même seconde, et cela suffit si l'alétoire n'est pas une donnée critique comme dans un programme de cryptographie.
 
 On ne se servira pas du paramètre de `time()` que l'on mettra à `NULL`.
 
@@ -255,7 +262,7 @@ int main() {
     srand(time(NULL));
 
     for (int i = 0; i < 10; i++) {
-        printf("%c ", 'A' + rand() % 26);
+        printf("%c ", 'A' + rand() % 27);
     }
 
     return 0;
