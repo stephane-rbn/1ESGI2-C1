@@ -239,7 +239,7 @@ Avec `min` et `max` deux entiers définis au préalable. En effet `a % b 	∈ {0
 
 Pour générer une lettre de l'aphabet "aléatoirement" :
 
-```
+```c
 char upper = 'A' + rand() % 27;
 char lower = 'a' + rand() % 27;
 ```
