@@ -233,7 +233,7 @@ Pour définir nos propres bornes, on peut faire :
 
 `randomNumber = (rand() % (max - min + 1)) + min;`
 
-Avec `min` et `max` deux entiers définis au préalable. En effet `a % b 	∈ {0 ; a - 1}`.
+Avec `min` et `max` deux entiers définis au préalable. L'opération se base sur le fait que `a % b 	∈ {0 ; b - 1}`.
 
 > Si on utilise une boucle, on aura l'impression que les valeurs sont aléatoires mais il ne s'agit que de nombres "pseudo-aléatoires". `rand` va en réalité toujours renvoyer la même séquence de nombres.
 
