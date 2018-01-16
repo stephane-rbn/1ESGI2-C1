@@ -2,7 +2,7 @@
 
 ## I - Construction de tableaux statiques à 1 dimension
 
-> Définition: Un tableau C est un ensemble de valeur de même type et de taille fixe, identifié par un nom de variable unique.
+> Définition: Un tableau C est un ensemble de valeurs de même type et de taille fixe, identifié par un nom de variable unique.
 
 - Construction : **type id[taille];**
 
