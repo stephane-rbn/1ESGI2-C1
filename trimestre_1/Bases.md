@@ -20,7 +20,7 @@ Différents types de langages :
 
 - Langage machine : binaire
 - Langages d'assemblage : mnémoniques (ADD SUB MOVE JUMP...) -> assembleur -> binaire (1000 1010...)
-- Langage évolués
+- Langages évolués
 
 Traducteurs :
 
