@@ -22,7 +22,3 @@ Remarque : **type id[T] = {v0, v1, ... vT-1};**
 char array[3] = {'a', 'b', 'c'};
 /* type id[] = {v0, v1, ..., vT-1}; */
 ```
-
-## II - Exemples
-
-(cf. exercices/)
