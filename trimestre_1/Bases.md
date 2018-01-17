@@ -8,7 +8,7 @@ Dans les années 70, création du C.
 
 Dennis Ritchie : ingénieur en chef qui pilotait le programme de recherche.
 
-1978: standard C (K et R)
+1978 : standard C (K et R)
 
 1989/90 : norme ANSI/ISO (la plus utilisée)
 
@@ -16,11 +16,11 @@ Dennis Ritchie : ingénieur en chef qui pilotait le programme de recherche.
 
 ### Vocabulaire
 
-Différents types de language :
+Différents types de langages :
 
-- Language machine : binaire
-- Languages d'assemblage : mnémoniques (ADD SUB MOVE JUMP...) -> assembleur -> binaire (1000 1010...)
-- Language évolués
+- Langage machine : binaire
+- Langages d'assemblage : mnémoniques (ADD SUB MOVE JUMP...) -> assembleur -> binaire (1000 1010...)
+- Langages évolués
 
 Traducteurs :
 
@@ -61,7 +61,7 @@ Erreurs :
 
 Toutes les lignes de finissent par `;`
 
-Faire attention à la casse. Variables en majuscules, comme M_PI qui s'utilse avec la bibliothèque math.h
+Faire attention à la casse. Variables en majuscules, comme M_PI qui s'utilise avec la bibliothèque math.h
 
 Les acolades `{}` délimitent le début et la fin.
 
@@ -237,7 +237,7 @@ char upper = 'A' + rand() % 26;
 char lower = 'a' + rand() % 26;
 ```
 
-Dans cette exemple, `upper` et `lower` auront toujours la même valeur quelque soit le nombre de compilation du fichier.
+Dans cet exemple, `upper` et `lower` auront toujours la même valeur quelque soit le nombre de compilation du fichier.
 
 `void srand(int start)` est une fonction qui permet d'indiquer à `rand()` où commencer, où **start** indiquera où se placer dans la séquence. Elle doit être appelée avant tout appel à `rand()` pour initialiser le générateur de nombres aléatoires.
 
