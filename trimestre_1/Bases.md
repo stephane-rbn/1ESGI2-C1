@@ -120,17 +120,6 @@ Exemples :
 - `unsigned short n = 20`  
 - `signed int p = 50`
 
-Codes format :
-
-- `%hd`
-- `%hu`
-- `%d`
-- `%u`
-- `%ld`
-- `%lu`
-
-u pour unsigned, h pour short et l pour long.
-
 Les bases :
 
 - n = 10; base 10
@@ -187,6 +176,8 @@ code format : dit au compilateur quel type de valeur on veut afficher avec print
 | long (4 octets) | `%ld` | `%lu` |
 | float (4 octets) | `%f` | `%e` |
 | double (8 octets) | `%lf` | `%le` |
+
+(u pour unsigned, h pour short et l pour long)
 
 `char` -> `short` -> `int` -> `long` -> `float` -> `double`
 
