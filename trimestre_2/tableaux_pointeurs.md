@@ -1,6 +1,6 @@
 # Tableaux et pointeurs
 
-## I - Construction de tableaux statiques à 1 dimension
+## Construction de tableaux statiques à 1 dimension
 
 > Définition: Un tableau C est un ensemble de valeur de même type et de taille fixe, identifié par un nom de variable unique.
 
