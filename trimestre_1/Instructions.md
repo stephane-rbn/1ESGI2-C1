@@ -10,17 +10,14 @@
 
 ### Syntaxe du *if* :
 
-```
-if (comparaison)
-{
-	// alors
+```c
+if (comparaison) {
+    // alors
 }
-else
-{
-	if 
-	{
-		// alors
-	}
+else {
+    if {
+	// alors
+    }
 }
 ```
 
@@ -28,23 +25,21 @@ else
 
 ex :
 
-```
+```c
 double a, b, result;
 scanf("%lf %lf", &a &b);
-if(b == 0)
-{
-	printf("Erreur");
+if(b == 0) {
+    printf("Erreur");
 }
-else
-{
-	result = a/b;
-	printf("Résultat : %lf", result);
+else {
+    result = a/b;
+    printf("Résultat : %lf", result);
 }
 ```
 
 ex :
 
-```
+```c
 // inférieur à 5 voitures -> 150 euros de bonus par voiture
 // entre 5 et 10 exclu    -> 250
 // entre 10 et 20 exclu   -> 800
@@ -56,19 +51,19 @@ int nb;
 scanf("%d", &nb);
 
 if (nb >= 20) {
-	salary = nb * 1000;
+    salary = nb * 1000;
 } else if (nb >= 10) {
-	salary = nb * 800;
+    salary = nb * 800;
 } else if (nb >= 5) {
-	salary = nb * 250;
+    salary = nb * 250;
 } else {
-	salary = nb * 150;
+    salary = nb * 150;
 }
 ```
 
 ### Syntaxe du *switch* :
 
-```
+```c
 switch (variable) {
 	case v1: inst;
 			 break;
@@ -83,22 +78,22 @@ switch (variable) {
 
 ex :
 
-```
+```c
 char character;
 
 scanf("Saisissez un caractère : %c", &character);
 
 switch (character) {
-	case 'a':
-	case 'e':
-	case 'i':
-	case 'o':
-	case 'u':
-	case 'y':
-		printf("C'est une voyelle\n");
-		break;
-	default:
-		printf("Ce n'est pas une voyelle\n");
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+    case 'y':
+	printf("C'est une voyelle\n");
+	break;
+    default:
+	printf("Ce n'est pas une voyelle\n");
 }
 ```
 
@@ -110,7 +105,7 @@ switch (character) {
 * `do while` -> 1 -> infini
 * `for`      ->
 
-```
+```c
 // Compter le nombre de chiffres impairs dans l'entier saisi
 // ex : 256
 
@@ -123,17 +118,17 @@ count_odd_numbers = 0;
 scanf("Saisissez un nombre : %d", &number);
 
 while (number > 0) {
-	digit = number % 10;
-	if (digit % 2 == 1) {
-		count_odd_numbers++;
-	}
-	number /= 10;
+    digit = number % 10;
+    if (digit % 2 == 1) {
+	count_odd_numbers++;
+    }
+    number /= 10;
 }
 ```
 
-```
+```c
 for(e1; e2; e3) {
-	// instructions
+    // instructions
 }
 ```
 e1 = une instruction **quelconque** qui n'est exécutée qu'une seule fois   
@@ -147,24 +142,24 @@ e3 = une instruction quelconque exécutée à chaque passage dans la boucle
 * `break`
 * `continue`
 
-```
+```c
 while(c) {
-	if(c) {
-		continue
-	}
+    if(c) {
+	continue
+    }
 }
 ```
 
-```
+```c
 for (i = 1; i < 10000; i++) {
-	if(i % 17 == 0) {
-		continue;
-		sum = sum + i;
-	}
+    if(i % 17 == 0) {
+	continue;
+	sum = sum + i;
+    }
 }
 ```
 
-```
+```c
 // a
 // bb
 // ccc
@@ -176,10 +171,10 @@ int nb, i, j;
 scanf("%d", &nb)
 
 for(i = 0; i < nb; i++) {
-	for(j = 0; j < i; j++) {
-		printf("%c", a);
-	}
-	a++
-# 	printf("\n");
+    for(j = 0; j < i; j++) {
+	printf("%c", a);
+    }
+    a++
+    printf("\n");
 }
 ```
