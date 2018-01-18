@@ -1,6 +1,6 @@
 # Tableaux et pointeurs
 
-## I - Construction de tableaux statiques à 1 dimension
+## Construction de tableaux statiques à 1 dimension
 
 > Définition : Un tableau en C est un ensemble de valeurs de même type et de taille fixe, identifié par un nom de variable unique.
 
@@ -22,7 +22,3 @@ Remarque : **type id[T] = {v0, v1, ... vT-1};**
 char array[3] = {'a', 'b', 'c'};
 /* type id[] = {v0, v1, ..., vT-1}; */
 ```
-
-## II - Exemples
-
-(cf. exercices/)
