@@ -65,14 +65,14 @@ if (nb >= 20) {
 
 ```c
 switch (variable) {
-	case v1: inst;
-			 break;
-	case v2: inst;
-			 break;
-	     ...
-	case vn: inst;
-			 break;
-	default: instructions;
+    case v1: inst;
+        break;
+    case v2: inst;
+        break;
+        ...
+    case vn: inst;
+	break;
+    default: instructions;
 }
 ```
 
