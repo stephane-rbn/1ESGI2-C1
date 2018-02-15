@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 int main(int argc, char **argv) {
-	printf("char: %lu\n", sizeof(char));
+    printf("char: %lu\n", sizeof(char));
     printf("int: %lu\n", sizeof(int));
     printf("long: %lu\n", sizeof(long));
     printf("float: %lu\n", sizeof(float));
