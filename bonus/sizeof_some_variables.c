@@ -9,23 +9,11 @@
 #include <stdio.h>
 
 int main(int argc, char **argv) {
-    char c;
-    int i;
-    long l;
-    float f;
-    double d;
-
-    c = 42;
-    i = 42;
-    l = 42;
-    f = 42;
-    d = 42;
-
-    printf("char: %lu\n", sizeof(c));
-    printf("int: %lu\n", sizeof(i));
-    printf("long: %lu\n", sizeof(l));
-    printf("float: %lu\n", sizeof(f));
-    printf("double: %lu\n", sizeof(d));
+    printf("char: %lu\n", sizeof(char));
+    printf("int: %lu\n", sizeof(int));
+    printf("long: %lu\n", sizeof(long));
+    printf("float: %lu\n", sizeof(float));
+    printf("double: %lu\n", sizeof(double));
     printf("\n");
     printf("void*: %lu\n", sizeof(void*));
     printf("int*: %lu\n", sizeof(int*));
