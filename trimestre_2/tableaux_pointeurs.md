@@ -135,3 +135,89 @@ nb = ptr1 - ptr2
 /* = entier */
 ```
 - `=` ->
+
+## Relations tableaux / pointeurs
+
+- à 1 dimension
+
+```c
+float array[10];
+
+for (i = 0; i < 10; i++) {
+    scanf("%f", array + i);
+}
+
+/*
+ *     array <=> &array[0]
+ * array + 1 <=> &array[1]
+ * array + i <=> &array[i]
+ *
+ *       *array <=> array[0]
+ * *(array + 1) <=> array[1]
+ * *(array + i) <=> array[i]
+ *
+ */
+```
+
+tableau => pointeur
+pointeur => tableau
+
+```c
+int *p;
+
+p = malloc(2500000 * sizeof(int));
+
+if (p! = NULL) {
+    for (i = 0; i < 2500000; i++) {
+        p[i] = rand();
+    }
+}
+
+free(p);
+
+/* malloc(<nb d'octets> * sizeof(<type>)); */
+```
+
+Augmenter dynamiquement la taille d'un tableau d'une case :
+
+| p |
+| --- |
+| @2000 |
+
+| 0 | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- |
+| 10 | 20 | 30 | 0 | 40 |
+
+```c
+int *q;
+
+q = malloc(6 * sizeof(int));
+
+for (i = 0; i < 5; i++) {
+    q[i] = p[i];
+}
+```
+
+| q |
+| --- |
+| @10000 |
+
+| 0 | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- |
+| 10 | 20 | 30 | 0 | 40 | 50 |
+
+```c
+q[5] = 50;
+
+free(p);
+
+p = q;
+```
+
+| p |
+| --- |
+| @10000 |
+
+| 0 | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| 10 | 20 | 30 | 0 | 40 | 50 |
