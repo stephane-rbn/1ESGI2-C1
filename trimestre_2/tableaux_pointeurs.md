@@ -138,7 +138,47 @@ nb = ptr1 - ptr2
 
 ## Relations tableaux / pointeurs
 
-- à 1 dimension
+L'adresse en mémoire d'un tableau et l'adresse de la 1ère valeur du tableau. Pour obtenir l'adresse d'un **tableau**, l'opérateur `&` n'est pas utile (on n'obtiendrait pas l'adresse attendue).
+
+Ainsi : `array => &array[0]` donne l'adresse du tableau `array`.
+
+Quand on fait un `printf()` de `array`, on obtient cette adresse et non l'affichage du tableau.
+
+Aussi : (ceci sera illustré juste après)
+
+> pointeur => tableau ET tableau => pointeur
+
+- Equivalences :
+
+```c
+int array[5] = {11, 22, 33, 44, 55};
+int *ptr;
+
+ptr = array;
+```
+
+On suppose les adresses suivantes :
+
+|valeurs|11|22|33|44|55|
+|--|--|--|--|--|--|
+|adresses|1000|1004|1008|1012|1016|
+
+Alors :
+
+```c
+/*
+    ptr => array => &array[0] => (ptr + 0) => 1000
+    *ptr => *(array + 0) => *(ptr + 0) => ptr[0] => 11
+
+    ptr + 1 => array + 1 => &array[1] => 1004
+    *(ptr + 1) => *(array + 1) => array[1] => ptr[1] => 22
+
+    ptr + i => array + i => &array[i] => adresse à la position i
+    *(ptr + i) => *(array + i) => array[i] => ptr[i] => valeur à la position i
+*/
+```
+
+- Autre exemple : à 1 dimension
 
 ```c
 float array[10];
@@ -159,9 +199,7 @@ for (i = 0; i < 10; i++) {
  */
 ```
 
-tableau => pointeur
-pointeur => tableau
-
+- Création de tableau dynamique avec `malloc()` :
 ```c
 int *p;
 
