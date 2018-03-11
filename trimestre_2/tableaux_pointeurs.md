@@ -138,7 +138,7 @@ nb = ptr1 - ptr2
 
 ## Relations tableaux / pointeurs
 
-L'adresse en mémoire d'un tableau et l'adresse de la 1ère valeur du tableau. Pour obtenir l'adresse d'un **tableau**, l'opérateur `&` n'est pas utile (on n'obtiendrait pas l'adresse attendue).
+L'adresse en mémoire d'un tableau est l'adresse de la 1ère valeur du tableau. Pour obtenir l'adresse d'un **tableau**, l'opérateur `&` n'est pas utile (on n'obtiendrait pas l'adresse attendue).
 
 Ainsi : `array => &array[0]` donne l'adresse du tableau `array`.
 
